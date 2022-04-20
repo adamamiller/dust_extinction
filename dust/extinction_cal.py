@@ -41,6 +41,8 @@ def ftz( wv, RV ):
         E(wv-V)/E(B-V)
     '''
 
+    wv = np.float64(wv) # otherwise np.piecewise() returns rounded values
+
     # UV, lambda < 2700
     c2 = -0.824 + 4.717 / RV
     c1 = 2.030 - 3.007 * c2
